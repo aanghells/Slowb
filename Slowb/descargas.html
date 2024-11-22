@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Descargas</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="Home.html" Class="navbar">
+        <div class="logo">SlowB</div></a>
+        <nav>
+            <a href="Materias.html"Class ="text-blue-600 hover:underline">Materias</a>
+            <a href="descargas.html"Class="text-blue-600 hover:underline">Descargas</a>
+            <a href="Documentos.html"Class="text-blue-600 hover:underline">Documentaciones</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>Options</h2>
+            <ul>
+                <li> <a href="Materias.html"Class ="text-blue-600 hover:underline">Materias</a></li>
+                <li> <a href="descargas.html"Class="text-blue-600 hover:underline">Descargas</a></li>
+                <li> <a href="Documentos.html"Class="text-blue-600 hover:underline">Documentaciones</a></li>
+                
+            </ul>
+        </aside>
+
+        <section class="content">
+            <h1>Historial de Descargas</h1>
+            
+            <div class="filtros-historial">
+                <div class="filtro-materia">
+                    <label for="filtro-materia-select">Materia:</label>
+                    <select id="filtro-materia-select">
+                        <option value="">Todas las Materias</option>
+                        <!-- Se llenará dinámicamente con JS -->
+                    </select>
+                </div>
+
+                <div class="filtro-fecha">
+                    <label for="fecha-inicio">Desde:</label>
+                    <input type="date" id="fecha-inicio">
+                    <label for="fecha-fin">Hasta:</label>
+                    <input type="date" id="fecha-fin">
+                </div>
+
+                <button id="btn-aplicar-filtros">Aplicar Filtros</button>
+            </div>
+
+            <div class="tabla-historial">
+                <table id="tabla-descargas">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Materia</th>
+                            <th>Documento</th>
+                            <th>Tamaño</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-descargas">
+                        <!-- Se llenará dinámicamente con JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="resumen-descargas">
+                <h2>Resumen de Descargas</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Total de Descargas</h3>
+                        <p id="total-descargas">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Descargas este Mes</h3>
+                        <p id="descargas-mes">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Documento Más Descargado</h3>
+                        <p id="documento-mas-descargado">-</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="Backend.js"></script>
+</body>
+</html>
